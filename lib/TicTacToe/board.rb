@@ -7,8 +7,6 @@ module TicTacToe
     def initialize(dimensions,dimxdim)
       @dimensions = dimensions
       @dimxdim = dimxdim
-      # @moves = Array.new((dimensions * dimensions), 0)
-      # @board = Array.new((dimensions * dimensions), ' ')
     end
 
     def self.printboard(dimensions,dxd)
@@ -33,14 +31,5 @@ module TicTacToe
       end
       dimensions
     end
-
-=begin
-
-    def self.win_com(newboard.dimxdim, player1, newboard.dimensions)
-        horizontal_com()
-    end
-
-=end
-
   end
 end
