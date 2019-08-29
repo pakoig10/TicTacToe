@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 module TicTacToe
-  class Game
+    class Game
         attr_accessor :turn
         attr_accessor :winner
         attr_reader   :cross, :naught
@@ -54,7 +54,10 @@ module TicTacToe
         end
 
         def win_combinations(player)
-            if win_horizontal(player) == true || win_vertical(player) == true || win_diagonal(player) == true || win_inverted_diagonal(player) == true
+            if win_horizontal(player) == true ||
+                win_vertical(player) == true ||
+                win_diagonal(player) == true ||
+                win_inverted_diagonal(player) == true
                 return player
             end
             @winner
@@ -105,23 +108,18 @@ module TicTacToe
         end
 
         def verify_winner
-            if @winner == @player1.symbol
-                puts "\n1st player won" 
+                puts "\n1st player won" if @winner == @player1.symbol
+                puts "\n2nd player won" if @winner == @player2.symbol
                 puts "\n"
-            elsif @winner == @player2.symbol
-                puts "\n2nd player won"
-                #try_again = tryA(try_again)
-                puts "\n"
-            end
         end
-=begin
+
         def self.try_again(try_again_var)
             while try_again_var != 'yes' && try_again_var != 'no'
-                print 'Would you want to try again? '
+                print 'Would you want to try again (yes/no)? '
                 try_again_var = gets.chomp.downcase
             end
             try_again_var
         end
-=end
+
     end
 end
